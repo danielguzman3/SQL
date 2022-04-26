@@ -1,0 +1,59 @@
+CREATE TABLE grocery_store 
+(item_id INTEGER PRIMARY KEY AUTOINCREMENT,
+name TEXT,
+category TEXT,
+price REAL,
+on_sale TEXT,
+aisle INTEGER);
+
+INSERT INTO grocery_store (name, category,price, on_sale, aisle)
+VALUES
+('Apple','Fruit', 1.39, 'No', 1);
+
+INSERT INTO grocery_store (name, category,price, on_sale, aisle)
+VALUES('Orange','Fruit', 2.39, 'No', 1);
+
+INSERT INTO grocery_store (name, category,price, on_sale, aisle)
+VALUES('Banana','Fruit', .50, 'No', 1);
+
+INSERT INTO grocery_store (name, category,price, on_sale, aisle)
+VALUES('Grapefruit','Fruit', 2.50, 'No', 1);
+
+INSERT INTO grocery_store (name, category,price, on_sale, aisle)
+VALUES('Mango','Fruit', 3.59, 'Yes', 1);
+
+INSERT INTO grocery_store (name, category,price, on_sale, aisle)
+VALUES('Pepsi','Beverages', 1.29, 'Yes', 4);
+
+INSERT INTO grocery_store (name, category,price, on_sale, aisle)
+VALUES('Orange Juice','Beverages', 2.29, 'No', 5);
+
+INSERT INTO grocery_store (name, category,price, on_sale, aisle)
+VALUES('Squirt','Beverages', .89, 'Yes', 4);
+
+INSERT INTO grocery_store (name, category,price, on_sale, aisle)
+VALUES('Gatorade','Beverages', 3.29, 'Yes', 4);
+
+INSERT INTO grocery_store (name, category,price, on_sale, aisle)
+VALUES('Sprite','Beverages', .89, 'Yes', 4);
+
+INSERT INTO grocery_store (name, category,price, on_sale, aisle)
+VALUES('Cookie','Baked Goods', .89, 'No', 12);
+
+INSERT INTO grocery_store (name, category,price, on_sale, aisle)
+VALUES('Cake','Baked Goods', 23.89, 'No', 12);
+
+INSERT INTO grocery_store (name, category,price, on_sale, aisle)
+VALUES('Crepes','Baked Goods', 7.19, 'No', 12);
+
+INSERT INTO grocery_store (name, category,price, on_sale, aisle)
+VALUES('Donut','Baked Goods', 1.89, 'No', 12);
+
+INSERT INTO grocery_store (name, category,price, on_sale, aisle)
+VALUES('Cheesecake','Baked Goods', 15.09, 'No', 12);
+
+SELECT * FROM grocery_store
+ORDER BY price;
+
+SELECT aisle, category, AVG(price) AS average_price FROM grocery_store
+GROUP BY category;
